@@ -1,5 +1,7 @@
 "use client"
 
+import {useRouter} from "next/navigation"
+
 //Icones
 import {
     User, 
@@ -12,6 +14,8 @@ const estilosdoincone = {
 }
 
 export default function Login(){
+      const router = useRouter()
+    
     return(
         <div className="w-screen h-screen bg-fundo1 flex justify-center items-center">
 
@@ -22,11 +26,14 @@ export default function Login(){
                 <div className="container bg-amarelo h-130 w-90 rounded-l-xl flex flex-col items-center justify-center">
                     <h1 className="font-bold text-xl mb-8">Bem-vindo de volta!</h1>
                     <p className="mb-3">Acesse sua conta</p>
-                    <input
+                    <button
+                    onClick={()=>{router.push('/')}}
                     type="button"
                     value="Entrar"
                     className="font-bold w-40 h-8 bg-white cursor-pointer rounded-md shadow-md hover:shadow-xl"
-                    />
+                    >
+                        Entrar
+                    </button>
                 </div>
 
                 {/* container brando  */}
@@ -46,7 +53,6 @@ export default function Login(){
                         </div>
                         <input
                         type="string"
-                        value=""
                         placeholder='E-MAIL'
                         className="text-xs text-center focus:outline-none w-full flex items-center mr-6"
                         />
@@ -60,18 +66,19 @@ export default function Login(){
                         </div>
                         <input
                         type="int"
-                        value=""
                         placeholder='SENHA'
                         className="text-xs text-center focus:outline-none w-full flex items-center mr-6"
                         />
                     </div>
 
                     {/* botão de cadastro */}
-                    <input
+                    <button
                     type='button'
                     value="Cadastrar"
                     className='font-bold w-40 h-8 bg-white text-vermelho cursor-pointer rounded-md shadow-lg border border-cinza hover:shadow-md hover:shadow-vermelho mt-7'
-                    />
+                    >
+                        Cadastrar
+                    </button>
                 </div>
             </div>
         </div>
