@@ -55,7 +55,7 @@ export default function Home(){
           />
         </div>
 
-        {/* Kanban */}
+        {/* Nome Kanban */}
         <div className="flex flex-row mt-12 ml-5">
           <FolderKanban color={coresdeicone.vermelho} />
           <h1 className="font-sans font-medium text-base ml-4">Kanban</h1>
